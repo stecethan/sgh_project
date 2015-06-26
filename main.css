@@ -1,0 +1,48 @@
+div {
+	font-family: Helvetica;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: left;
+	padding-top: 25px;
+	padding-bottom: 25px; 
+	margin: 10px;
+
+
+}
+
+.bgd {
+	background-color: #999;
+}
+
+.qns {
+	font-family: Verdana;
+    color: #0000CD;
+    text-align: left;
+}
+
+
+
+#bottom {
+    font-family: Courier;
+    color: #CC0000;
+}
+
+.radio {
+
+	font-family: Helvetica;
+	color: black;
+	text-align: left;
+	font-size: 18px;
+}
+
+p {
+
+	font-size: 24px;
+	color: black;
+	font-family: Helvetica;
+}
+
+.toggle	{
+width:10;
+height:5;
+}
