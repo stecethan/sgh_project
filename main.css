@@ -1,4 +1,4 @@
-div {
+#heading {
 	font-family: Helvetica;
 	font-size: 50px;
 	font-weight: bold;
@@ -8,6 +8,12 @@ div {
 	margin: 10px;
 
 
+}
+
+#mainpage {
+	padding-top: 25px;
+	padding-bottom: 25px; 
+	margin: 10px;
 }
 
 .bgd {
