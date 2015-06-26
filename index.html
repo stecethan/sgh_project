@@ -34,18 +34,14 @@
 		<br/><br/>
     <div id="mainpage">
 
-      <div id="score"></div>
-      <script>
-        var score = 0;
-        $('#score').html('Your score is ' + score);
-      </script>
+    
 
       <div class="qns">
         <h4>Post-CABG Risk Scoring</h4> 
 
         <!-- Start of Quiz -->
-        <p>Age</p>
-        <input type="checkbox" data-toggle="toggle" name="q1" points="2" id="age" data-size="large" data-on=">= 65" data-off="< 65"/>
+        <p>1. Age</p>
+        <input type="checkbox" data-toggle="toggle" name="q1" points="2" id="age" data-size="normal" data-on=">= 65" data-off="< 65"/>
         <script>
           $(function() {
             $('#age').change(function() {
@@ -61,107 +57,142 @@
           })
         </script>
 
+               <p>2. Hypertension</p>
+        <input type="checkbox" data-toggle="toggle" name="q2" points="1" id="htn" data-size="normal" data-on="Yes" data-off="No"/>
+        <script>
+          $(function() {
+            $('#htn').change(function() {
+              if ($(this).prop('checked')) {
+                score += 1;
+              }
+              else {
+                score -= 0;
+              }
 
-      <!-- 
-      <div class="qns">
-        <p> Hypertension </p>
-         <form role="form">
-          <div class="radio">
-            <label><input type="radio" name="q2" points="1" id="htn" />Yes </label></br>
-            </br>
-            <label><input type="radio" name="q2"points="0" id="htn" />No </label>
-          </div>
-      </div>
+              $('#score').html('Your score is ' + score);
+            })
+          })
+        </script>
 
-      <div class="qns">
-        <p> Anaemia </p>
-         <form role="form">
-          <div class="radio">
-            <label><input type="radio" name="q3" points="2" id="anaemia" />Yes </label> </br>
-            </br>
-            <label><input type="radio" name="q3"points="0" id="anaemia" />No </label>
-          </div>
-      </div>
+           <p>3. Anaemia</p>
+        <input type="checkbox" data-toggle="toggle" name="q3" points="2" id="anaemia" data-size="normal" data-on="Yes" data-off="No"/>
+        <script>
+          $(function() {
+            $('#anaemia').change(function() {
+              if ($(this).prop('checked')) {
+                score += 2;
+              }
+              else {
+                score -= 0;
+              }
 
-      <div class="qns">
-        <p> Pre-Operative Creatinine More than or equal to 90umol/L </p>
-        <form role="form">
-          <div class="radio">
-            <label><input type="radio" name="q4" points="2" id="creat" />Yes </label> </br>
-            </br>
-            <label><input type="radio" name="q4"points="0" id="creat" />No </label>
-          </div>
-      </div>
+              $('#score').html('Your score is ' + score);
+            })
+          })
+        </script>
+
+          <p>4. Pre-Op Creatinine >= 90mmol/L</p>
+        <input type="checkbox" data-toggle="toggle" name="q4" points="2" id="creat" data-size="normal" data-on="Yes" data-off="No"/>
+        <script>
+          $(function() {
+            $('#creat').change(function() {
+              if ($(this).prop('checked')) {
+                score += 2;
+              }
+              else {
+                score -= 0;
+              }
+
+              $('#score').html('Your score is ' + score);
+            })
+          })
+        </script>
       	
-      <div class="qns">
-        <p> RBC Transfusion </p>
-         <form role="form">
-          <div class="radio">
-            <label><input type="radio" name="q5" points="1" id="rbc" />Yes </label> </br>
-            </br>
-            <label><input type="radio" name="q5"points="0" id="rbc" />No </label>
-          </div>
-      </div>
+         <p>5. RBC Transfusion</p>
+        <input type="checkbox" data-toggle="toggle" name="q5" points="1" id="rbc" data-size="normal" data-on="Yes" data-off="No"/>
+        <script>
+          $(function() {
+            $('#rbc').change(function() {
+              if ($(this).prop('checked')) {
+                score += 1;
+              }
+              else {
+                score -= 0;
+              }
 
-      <div class="qns">
-        <p> Use of intra-aortic balloon pump</p>
-         <form role="form">
-          <div class="radio">
-            <label><input type="radio" name="q6" points="2" id="iabp" />Yes </label> </br>
-            </br>
-            <label><input type="radio" name="q6"points="0" id="iabp" />No </label>
-          </div>
-      </div>
+              $('#score').html('Your score is ' + score);
+            })
+          })
+        </script>
 
-      <div class="qns">
-        <p> Cardiopulmonary bypass more than or equal to 120 min</p>
-        <form role="form">
-          <div class="radio">
-            <label><input type="radio" name="q7" points="2" id="cpb" />Yes </label> </br>
-            </br>
-            <label><input type="radio" name="q7"points="0" id="cpb" />No </label>
-          </div>
-      </div>
+           <p>6. Use of Intra-Aortic Balloon Pump</p>
+        <input type="checkbox" data-toggle="toggle" name="q6" points="2" id="iabp" data-size="normal" data-on="Yes" data-off="No"/>
+        <script>
+          $(function() {
+            $('#iabp').change(function() {
+              if ($(this).prop('checked')) {
+                score += 2;
+              }
+              else {
+                score -= 0;
+              }
 
-      <div class="qns">
-        <p> Lowest haematocrit during cardiopulmonary bypass <22% </p>
-        <form role="form">
-          <div class="radio">
-            <label><input type="radio" name="q8" points="1" id="hct" />Yes </label> </br>
-            </br>
-            <label><input type="radio" name="q8"points="0" id="hct" />No </label>
-          </div>
-      </div> -->
+              $('#score').html('Your score is ' + score);
+            })
+          })
+        </script>
+
+       <p>7. Cardiopulmonary bypass more than or equal to 120 min</p>
+        <input type="checkbox" data-toggle="toggle" name="q7" points="2" id="cpb" data-size="normal" data-on="Yes" data-off="No"/>
+        <script>
+          $(function() {
+            $('#cpb').change(function() {
+              if ($(this).prop('checked')) {
+                score += 2;
+              }
+              else {
+                score -= 0;
+              }
+
+              $('#score').html('Your score is ' + score);
+            })
+          })
+        </script>
+
+ <p>8. Lowest haematocrit during cardiopulmonary bypass less than 22% </p>
+        <input type="checkbox" data-toggle="toggle" name="q8" points="1" id="hct" data-size="normal" data-on="Yes" data-off="No"/>
+        <script>
+          $(function() {
+            $('#hct').change(function() {
+              if ($(this).prop('checked')) {
+                score += 1;
+              }
+              else {
+                score -= 0;
+              }
+
+              $('#score').html('Your score is ' + score);
+            })
+          })
+        </script>
+
+        <br> </br>
+
+          <div id="score"></div>
+      <script>
+        var score = 0;
+        $('#score').html('Your score is ' + score);
+      </script>
     </div>
       
-<script>
+    <br></br>
 
-          function calculatePoints() {
-
-
-var u = 0;
-
-
-if ( mdcVal("#age") == 1 ) {u=u+2;}
-if ( mdcVal("#htn") == 1 ) {u=u+1;}
-if ( mdcVal("#anaemia") == 1 ) {u=u+2;}
-if ( mdcVal("#creat") == 1 ) {u=u+2;}
-if ( mdcVal("#rbc") == 1 ) {u=u+1;}
-if ( mdcVal("#iabp") == 1 ) {u=u+2;}
-if ( mdcVal("#cpb") == 1 ) {u=u+2;}
-if ( mdcVal("#hct") == 1 ) {u=u+1;}
-
-
-
-if (u < 3) {msg = "Low risk group: 1.3% chance of PE in an ED population. ";}
-
-if (u >= 4 && u <= 8) {msg = "Moderate risk group: 16.2% chance of PE in an ED population. ";}
-
-if (u > 9) {msg = "High risk group: 40.6% chance of PE in an ED population. ";}
-
-}
-
-        </script></form></div></div>
+    <div id="textbox">
+        <p> Categories of AKI risk:</p>
+        <p> Low: 0-3 points</p>
+        <p> Medium: 4-8 points</p>
+        <p> High: 9-13 points </p>
+    </div>
 
 
 

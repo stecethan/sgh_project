@@ -33,6 +33,18 @@
     color: #CC0000;
 }
 
+#score {
+	font-family: Verdana;
+	color: red;
+	font-size: 24px;
+}
+#textbox {
+	font-family: Verdana;
+	color: black;
+	font-size: 24px;
+	border-style: solid;
+    border-width: 2px;
+}
 .radio {
 
 	font-family: Helvetica;
